@@ -1,0 +1,17 @@
+<div class="container">
+  <form>
+    <div class="form-group">
+      <h1 class="text-center" id="todo" >My To Do List</h1>
+        <input type="text" class="form-control" [(ngModel)]="todo" name="todo">
+          <span>
+           <button type="submit" (click)="onClick()" class="btn  btn-success">submit</button> 
+          </span> 
+          <br>
+          <ul class="list-group">
+            <li *ngFor="let todo of todoArray; let i = index;">
+              {{todo.name}} <button class="btn btn-danger" (click)="onDelete(i)">X</button>
+            </li>
+          </ul>
+    </div>
+  </form>
+</div>
